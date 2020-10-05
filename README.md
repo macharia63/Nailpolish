@@ -18,13 +18,15 @@ My Project is about an online nail polish store where the users are able to purc
    ##### store page 
    - It consists of all carousel, products and their prices.
    ##### cart page 
-    - It consists of; 
+   - It constists of;
+     - It consists of; 
      - continue shopping button.
      - images of all items in the cart.
      - names of the items in the cart.
      - prices of thr items in the cart.
      - quantity of the items in the cart.
      - total amount of the items in the cart.
+    
    ##### checkout page
    - It consists of; 
      - form where the user can fill name, email and the shipping information.
@@ -80,7 +82,7 @@ My Project is about an online nail polish store where the users are able to purc
    2. Create "Procfile" file
       web: gunicorn lapland_in_sweden.wsgi:application
    3. Login Heroku
-   4.Setting Config Vars: Heroku homepage - Select "lapland-in-sweden" project - Setting - Click "Reveal Config Vars" - Create Config Vars and save
+   4.Setting Config Vars: Heroku homepage - Select "Nailpolish" project - Setting - Click "Reveal Config Vars" - Create Config Vars and save
    - AWS_ACCESS_KEYID, AWS_SECRET_ACCESS_KEY: You can get a csv file, which includes the key information when you create staticfiles-user. Find the keys and copy and paste them on the fields.
    - DATABASE_URL
    - The value will be created when you create a new Postgres database.
