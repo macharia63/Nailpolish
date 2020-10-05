@@ -79,7 +79,7 @@ My Project is about an online nail polish store where the users are able to purc
    1. Create "requirements.txt" file
       pip3 freeze > requirements.txt
    2. Create "Procfile" file
-      web: gunicorn lapland_in_sweden.wsgi:application
+      web: gunicorn..
    3. Login Heroku
    4.Setting Config Vars: Heroku homepage - Select "Nailpolish" project - Setting - Click "Reveal Config Vars" - Create Config Vars and save
    - AWS_ACCESS_KEYID, AWS_SECRET_ACCESS_KEY: You can get a csv file, which includes the key information when you create staticfiles-user. Find the keys and copy and paste them on the fields.
