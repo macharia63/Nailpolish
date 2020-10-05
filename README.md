@@ -33,7 +33,7 @@ My Project is about an online nail polish store where the users are able to purc
      - pay button where the user is able to pay for the products.
    ##### payment page
    - consist of a paypal buttons where the user is able to pay for the products.
-   - 
+   
    ## Technologies used
    ###### HTML5
    - It was used to create a markup
@@ -102,7 +102,7 @@ My Project is about an online nail polish store where the users are able to purc
    - git commit -m "commit message" 
    - git push
   - Type commands as below for git remote
-  1. git remote add heroku https://git.heroku.com/lapland-in-sweden
+  1. git remote add heroku
   2. git push -u heroku master
   3. git remote -v
   4. Run the webpage
