@@ -18,8 +18,7 @@ My Project is about an online nail polish store where the users are able to purc
    ##### store page 
    - It consists of all carousel, products and their prices.
    ##### cart page 
-   - It constists of;
-     - It consists of; 
+   - It constists of; 
      - continue shopping button.
      - images of all items in the cart.
      - names of the items in the cart.
