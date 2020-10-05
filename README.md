@@ -46,7 +46,7 @@ My Project is about an online nail polish store where the users are able to purc
    - To write the functionality of the project.
    ###### Bootstrap
    - It was used to help style the website and with grid layout of it.
-   ###### MongoDB atlas
+   ###### MongoDB 
    - It was used as non-related database for the project.
    ###### w3c validator
    - It was used to check HTML code 
