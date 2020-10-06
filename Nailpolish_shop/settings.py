@@ -78,16 +78,14 @@ WSGI_APPLICATION = 'Nailpolish_shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls',
-        'USER': 'name',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'db37pr7oge3p72',
+        'USER': 'lhmdpnwmtotgor',
+        'PASSWORD': '07be8fb60150915344ba78ba2d045273f49e1d7616707669a39e69e7e956fdfe',
+        'HOST': 'ec2-3-234-109-123.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
  }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -125,4 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_URL = '/images/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
+
