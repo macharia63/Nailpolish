@@ -24,7 +24,7 @@ SECRET_KEY = '*38e@f^l@h=49f$66^j_1m!*(7^9584dqlx2lw#hhk+^yn%qhs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['nailpolish-shop.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
