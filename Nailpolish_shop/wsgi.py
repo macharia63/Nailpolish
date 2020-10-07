@@ -10,10 +10,13 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from django.contrib.staticfiles.handlers import StaticFilesHandler
+
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Nailpolish_shop.settings')
 
 application = get_wsgi_application()
+
 
 from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)
