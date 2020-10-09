@@ -31,12 +31,12 @@
 							<input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
 						</div>
 						<div class="form-field">
-							<input class="form-control" type="text" name="country" placeholder="country">
+							<input class="form-control" type="text" name="country" placeholder="country..">
 						</div>
 					</div>
 
 					<hr>
-					<input id="form-button" class="btn btn-success btn-block" type="submit" value="pay">
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
 				</form>
 			</div>
 
@@ -69,19 +69,24 @@
 		</div>
 	</div>
 
-	<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+	<script src="https://www.paypal.com/sdk/js?client-id=YOUR-CLIENT-ID&currency=USD&disable-funding=credit"></script>
 
 	<script>
+		var total = '{{order.get_cart_total}}'
         // Render the PayPal button into #paypal-button-container
         paypal.Buttons({
 
+        	style: {
+                color:  'blue',
+                shape:  'rect',
+            },
 
             // Set up the transaction
             createOrder: function(data, actions) {
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '0.01'
+                            value:parseFloat(total).toFixed(2)
                         }
                     }]
                 });
@@ -91,7 +96,7 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    submitFormData()
                 });
             }
 
@@ -100,7 +105,6 @@
 
 	<script type="text/javascript">
 		var shipping = '{{order.shipping}}'
-		var total = '{{order.get_cart_total}}'
 
 		if (shipping == 'False'){
 		 	document.getElementById('shipping-info').innerHTML = ''
@@ -124,7 +128,8 @@
 	    	document.getElementById('form-button').classList.add("hidden");
 	    	document.getElementById('payment-info').classList.remove("hidden");
 	    })
-	    /*
+
+		/*
 	    document.getElementById('make-payment').addEventListener('click', function(e){
 	    	submitFormData()
 	    })
